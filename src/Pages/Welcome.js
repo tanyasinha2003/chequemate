@@ -14,6 +14,7 @@ export default function Welcome() {
     <Container>
       <h1>Welcome {userData.fName + " " + userData.lName}</h1>
       <p>You are {userData.age} years old.</p>
+      <p>Email: {userData.email}</p>
     </Container>
   );
 }
