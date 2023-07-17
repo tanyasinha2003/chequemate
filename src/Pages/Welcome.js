@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
 export default function Welcome() {
   const [userData, setUserData] = useState([]);
 
@@ -9,5 +10,10 @@ export default function Welcome() {
     }
   }, []);
   console.log(userData);
-  return <h1>Welcome {userData.fName + " " + userData.lName}</h1>;
+  return (
+    <Container>
+      <h1>Welcome {userData.fName + " " + userData.lName}</h1>
+      <p>You are {userData.age} years old.</p>
+    </Container>
+  );
 }
